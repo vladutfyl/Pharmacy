@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="650.0" style="-fx-background-color: #4ae0c2;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AdminView">
+   <children>
+      <AnchorPane layoutX="13.0" layoutY="160.0" prefHeight="107.0" prefWidth="310.0">
+            <AnchorPane prefHeight="106.0" prefWidth="311.0">
+               <children>
+                  <TableView fx:id="productsList" layoutX="1.0" prefHeight="106.0" prefWidth="310.0">
+                     <columns>
+                        <TableColumn text="Name">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="name" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Tip">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="type" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Pret">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="price" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Cantitate">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="stock" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Rating">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="rating" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Discount">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="discount" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Per">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="quantityDiscounted" />
+                           </cellValueFactory>
+                        </TableColumn>
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+
+      </AnchorPane>
+      <AnchorPane layoutX="325.0" layoutY="160.0" prefHeight="107.0" prefWidth="310.0">
+            <AnchorPane prefHeight="104.0" prefWidth="311.0">
+               <children>
+                  <TableView fx:id="usersList" layoutX="1.0" prefHeight="107.0" prefWidth="310.0">
+                     <columns>
+                        <TableColumn text="Username">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="username" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Password">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="password" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Email">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="email" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Nume">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="nume" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Money">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="money" />
+                           </cellValueFactory>
+                        </TableColumn>
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+      </AnchorPane>
+      <ImageView fx:id="logo" fitHeight="89.0" fitWidth="73.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="images/caduceus.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="102.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to" wrappingWidth="131.4701385498047">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#2e423c" layoutX="102.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pharmacy">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="14.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Products" underline="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="325.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Users" underline="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="deleteUserButton" layoutX="480.0" layoutY="395.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: #30c2a5;" text="Delete" textFill="WHITE" />
+      <Button fx:id="modifyUserButton" layoutX="561.0" layoutY="395.0" mnemonicParsing="false" onAction="#modifyUser" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: #30c2a5;" text="Modify" textFill="WHITE" />
+      <Text layoutX="525.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Administrator" underline="true" wrappingWidth="108.99188232421875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="nameProductTextField" layoutX="14.0" layoutY="282.0" prefHeight="25.0" prefWidth="148.0" promptText="name" />
+      <TextField fx:id="typeTextField" layoutX="174.0" layoutY="282.0" prefHeight="25.0" prefWidth="148.0" promptText="type" />
+      <TextField fx:id="quantityTextField" layoutX="14.0" layoutY="319.0" prefHeight="25.0" prefWidth="148.0" promptText="quantity" />
+      <TextField fx:id="priceTextField" layoutX="174.0" layoutY="319.0" prefHeight="25.0" prefWidth="148.0" promptText="price" />
+      <TextField fx:id="discountTextField" layoutX="14.0" layoutY="359.0" prefHeight="25.0" prefWidth="148.0" promptText="discount" />
+      <TextField fx:id="ratingTextField" layoutX="14.0" layoutY="399.0" prefHeight="25.0" prefWidth="148.0" promptText="rating" />
+      <Button fx:id="addButton" layoutX="174.0" layoutY="359.0" mnemonicParsing="false" onAction="#addProducts" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #30c2a5;" text="Add" textFill="WHITE" />
+      <Button fx:id="deleteProductButton" layoutX="174.0" layoutY="395.0" mnemonicParsing="false" onAction="#deleteProduct" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: #30c2a5;" text="Delete" textFill="WHITE" />
+      <Button fx:id="modifyProductButton" layoutX="248.0" layoutY="395.0" mnemonicParsing="false" onAction="#modifyProduct" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: #30c2a5;" text="Modify" textFill="WHITE" />
+      <TextField fx:id="usernameTextField" layoutX="325.0" layoutY="282.0" prefHeight="25.0" prefWidth="148.0" promptText="money" />
+      <TextField fx:id="nameUserTextField" layoutX="487.0" layoutY="282.0" prefHeight="25.0" prefWidth="148.0" promptText="name" />
+      <TextField fx:id="emailTextField" layoutX="325.0" layoutY="319.0" prefHeight="25.0" prefWidth="148.0" promptText="email" />
+      <TextField fx:id="quantityDiscountedTextField" layoutX="325.0" layoutY="356.0" prefHeight="25.0" prefWidth="148.0" promptText="quantityDiscounted" />
+      <TextField fx:id="passwordTextField" layoutX="487.0" layoutY="319.0" prefHeight="25.0" prefWidth="148.0" promptText="password" />
+      <Button fx:id="refreshButton" layoutX="325.0" layoutY="395.0" mnemonicParsing="false" onAction="#generateReport" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #30c2a5;" text="Generate" textFill="WHITE" />
+      <Button fx:id="backToLoginButton" layoutX="487.0" layoutY="95.0" mnemonicParsing="false" onAction="#backToLogin" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #30c2a5;" text="BackToLogin" textFill="WHITE" />
+      <Label fx:id="labelMaxAmount" layoutX="498.0" layoutY="4.0" prefHeight="21.0" prefWidth="139.0" />
+      <Button fx:id="setMaxDiscount" layoutX="537.0" layoutY="356.0" mnemonicParsing="false" onAction="#setMaxDiscount" prefHeight="31.0" prefWidth="98.0" style="-fx-background-color: #30c2a5;" text="SetMax Discount" textFill="WHITE" />
+      <TextField fx:id="maxDiscountTextField" layoutX="480.0" layoutY="356.0" prefHeight="31.0" prefWidth="52.0" promptText="maxDiscount" />
+      
+   </children>
+</AnchorPane>
